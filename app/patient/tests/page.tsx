@@ -1,7 +1,7 @@
 'use client';
 
 import { useAuth } from '@/lib/auth';
-import { useDataStore } from '@/lib/store';
+import { useDataStore, TestResult } from '@/lib/store';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import Sidebar from '@/components/Layout/Sidebar';
@@ -17,7 +17,7 @@ export default function PatientTests() {
   const router = useRouter();
   const { testResults, doctors } = useDataStore();
   const [showOTP, setShowOTP] = useState(false);
-  const [selectedTest, setSelectedTest] = useState(null);
+  const [selectedTest, setSelectedTest] = useState<TestResult | null>(null);
 
   useEffect(() => {
     if (!isAuthenticated || user?.role !== 'patient') {
@@ -27,7 +27,7 @@ export default function PatientTests() {
 
   const patientTests = testResults.filter(test => test.patientId === user?.id);
 
-  const handleDownload = (test) => {
+  const handleDownload = (test: TestResult) => {
     setSelectedTest(test);
     setShowOTP(true);
   };

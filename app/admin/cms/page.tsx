@@ -1,7 +1,7 @@
 'use client';
 
 import { useAuth } from '@/lib/auth';
-import { useDataStore } from '@/lib/store';
+import { useDataStore, CMSContent } from '@/lib/store';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import Sidebar from '@/components/Layout/Sidebar';
@@ -20,7 +20,7 @@ export default function AdminCMS() {
   const router = useRouter();
   const { cmsContent, addCMSContent, updateCMSContent, deleteCMSContent } = useDataStore();
   const [showForm, setShowForm] = useState(false);
-  const [editingContent, setEditingContent] = useState(null);
+  const [editingContent, setEditingContent] = useState<CMSContent | null>(null);
   const [formData, setFormData] = useState({
     type: 'hero',
     title: '',
@@ -55,7 +55,7 @@ export default function AdminCMS() {
     }
   }, [editingContent]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (editingContent) {
       updateCMSContent(editingContent.id, formData);
@@ -66,7 +66,7 @@ export default function AdminCMS() {
     setEditingContent(null);
   };
 
-  const handleDelete = (id) => {
+  const handleDelete = (id: string) => {
     if (confirm('Are you sure you want to delete this content?')) {
       deleteCMSContent(id);
     }
