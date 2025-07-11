@@ -26,26 +26,26 @@ export default function AboutUsPage() {
   const values = [
     {
       icon: <Heart className="w-8 h-8" />,
-      title: "Compassionate Care",
-      description: "We treat every patient with empathy, respect, and dignity, ensuring they feel valued and cared for throughout their healthcare journey.",
+      title: "সহানুভূতিশীল যত্ন",
+      description: "আমরা প্রতিটি রোগীকে সহানুভূতি, শ্রদ্ধা ও মর্যাদায় আচরণ করি, যেন তারা তাদের চিকিৎসা যাত্রাজুড়ে মূল্যবান ও যত্নশীল অনুভব করে।",
       color: "bg-red-50 text-red-600"
     },
     {
       icon: <Shield className="w-8 h-8" />,
-      title: "Excellence & Safety",
-      description: "We maintain the highest standards of medical excellence and patient safety through continuous improvement and evidence-based practices.",
+      title: "শ্রেষ্ঠত্ব এবং সুরক্ষা",
+      description: "আমরা অবিচ্ছিন্ন উন্নতি ও প্রমাণভিত্তিক চর্চার মাধ্যমে চিকিৎসা উৎকর্ষ ও রোগী নিরাপত্তার সর্বোচ্চ মান বজায় রাখি।",
       color: "bg-blue-50 text-blue-600"
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: "Collaborative Approach",
-      description: "We believe in teamwork and collaboration among healthcare professionals to provide comprehensive and coordinated care.",
+      title: "সহযোগী পদ্ধতি",
+      description: "আমরা স্বাস্থ্যসেবা পেশাজীবীদের দলবদ্ধ কাজ ও সহযোগিতায় বিশ্বাসী, যাতে সমন্বিত ও পূর্ণাঙ্গ সেবা প্রদান করা যায়।",
       color: "bg-green-50 text-green-600"
     },
     {
       icon: <Target className="w-8 h-8" />,
-      title: "Innovation & Progress",
-      description: "We embrace cutting-edge technology and innovative treatments to deliver the most effective healthcare solutions.",
+      title: "উদ্ভাবন এবং অগ্রগতি",
+      description: "আমরা সর্বাধুনিক প্রযুক্তি ও উদ্ভাবনী চিকিৎসাপদ্ধতি গ্রহণ করে সবচেয়ে কার্যকর স্বাস্থ্যসেবা নিশ্চিত করি।",
       color: "bg-purple-50 text-purple-600"
     }
   ];
@@ -53,23 +53,23 @@ export default function AboutUsPage() {
   const achievements = [
     {
       number: "50,000+",
-      label: "Patients Served",
-      description: "Successfully treated patients across both districts"
+      label: "পরিবেশিত রোগী",
+      description: "উভয় জেলায় সফলভাবে চিকিৎসা দেওয়া রোগী"
     },
     {
       number: "200+",
-      label: "Medical Professionals",
-      description: "Experienced doctors and healthcare staff"
+      label: "চিকিত্সা পেশাজীবী",
+      description: "অভিজ্ঞ চিকিৎসক ও স্বাস্থ্যসেবা কর্মী"
     },
     {
       number: "98%",
-      label: "Patient Satisfaction",
-      description: "Consistently high patient satisfaction ratings"
+      label: "রোগীর সন্তুষ্টি",
+      description: "স্থায়ীভাবে উচ্চ রোগী সন্তুষ্টি"
     },
     {
       number: "24/7",
-      label: "Emergency Services",
-      description: "Round-the-clock emergency medical care"
+      label: "জরুরী পরিষেবা",
+      description: "সার্বক্ষণিক জরুরি চিকিৎসা সেবা"
     }
   ];
 
@@ -124,20 +124,20 @@ export default function AboutUsPage() {
             </Link>
 
             <div className="hidden md:flex items-center space-x-8">
-              <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors">Home</Link>
-              <Link href="/services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</Link>
-              <Link href="/find-a-doctor" className="text-gray-700 hover:text-blue-600 transition-colors">Find A Doctor</Link>
-              <Link href="/locations" className="text-gray-700 hover:text-blue-600 transition-colors">Locations</Link>
-              <Link href="/about-us" className="text-blue-600 font-medium">About Us</Link>
-              <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</Link>
+              <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors">হোম</Link>
+              <Link href="/services" className="text-gray-700 hover:text-blue-600 transition-colors">সেবা</Link>
+              <Link href="/find-a-doctor" className="text-gray-700 hover:text-blue-600 transition-colors">ডাক্তার খুঁজুন</Link>
+              <Link href="/locations" className="text-gray-700 hover:text-blue-600 transition-colors">লোকেশনসমূহ</Link>
+              <Link href="/about-us" className="text-blue-600 font-medium">আমাদের সম্পর্কে</Link>
+              <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">যোগাযোগ</Link>
             </div>
 
             <div className="flex items-center space-x-4">
               <Link href="/patient/login">
-                <Button variant="outline" size="sm">Patient Portal</Button>
+                <Button variant="outline" size="sm">রোগী পোর্টাল</Button>
               </Link>
               <Link href="/moderator/login">
-                <Button size="sm">Staff Login</Button>
+                <Button size="sm">কর্মী লগইন</Button>
               </Link>
             </div>
             <LanguageToggle />
@@ -150,11 +150,10 @@ export default function AboutUsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              About Amin Diagnostics
+              আমিন ডায়াগনস্টিকস সম্পর্কে
             </h1>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-              Dedicated to providing exceptional healthcare services across Jhineidah and Kushtia districts 
-              with compassion, expertise, and cutting-edge medical technology.
+              ঝিনেইদাহ এবং কুশিয়া জেলা জুড়ে সমবেদনা, দক্ষতা এবং আধুনিক চিকিৎসা প্রযুক্তি সহ ব্যতিক্রমী স্বাস্থ্যসেবা প্রদান করতে উৎসর্গিত
             </p>
           </div>
         </div>
@@ -176,29 +175,12 @@ export default function AboutUsPage() {
                     <Target className="w-6 h-6 text-blue-600 mr-2" />
                     Our Mission
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    To provide accessible, high-quality healthcare services that improve the health and well-being 
-                    of our communities in Jhineidah and Kushtia districts. We are committed to delivering 
-                    patient-centered care with compassion, integrity, and excellence.
-                  </p>
-                </div>
-                
-                <div>
+                  <p className="text-gray-600 leading-relaxed">আমাদের সম্প্রদায়ের স্বাস্থ্যের উন্নতির জন্য ঝিনেইদাহ ও কুশিয়া জেলায় সহজলভ্য, উচ্চমানের স্বাস্থ্যসেবা প্রদান করা। আমরা সহানুভূতি, সততা ও উৎকর্ষতার সঙ্গে রোগী-কেন্দ্রিক সেবা দিতে অঙ্গীকারবদ্ধ।</p>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3 flex items-center">
                     <Globe className="w-6 h-6 text-green-600 mr-2" />
                     Our Vision
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    To be the leading healthcare provider in Bangladesh, recognized for our innovative approach, 
-                    exceptional patient outcomes, and commitment to advancing medical science while making 
-                    healthcare accessible to all.
-                  </p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="relative">
-              <img 
+                  <p className="text-gray-600 leading-relaxed">বাংলাদেশে শীর্ষস্থানীয় স্বাস্থ্যসেবা প্রদানকারী হওয়া, আমাদের উদ্ভাবনী পদ্ধতি, ব্যতিক্রমী রোগী ফলাফল এবং সকলের জন্য স্বাস্থ্যসেবা নিশ্চিত করার প্রতিশ্রুতির জন্য স্বীকৃত।</p>
                 src="https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=800" 
                 alt="Healthcare Team" 
                 className="rounded-2xl shadow-xl"
@@ -350,22 +332,22 @@ export default function AboutUsPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-green-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">Join Our Healthcare Family</h2>
+          <h2 className="text-3xl font-bold text-white mb-6">আমাদের স্বাস্থ্যসেবা পরিবারে যোগ দিন</h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Experience the difference that compassionate, expert healthcare can make in your life. 
-            We're here to serve you and your family's health needs.
+            সহানুভূতিশীল, বিশেষজ্ঞ স্বাস্থ্যসেবা আপনার জীবনে যে পার্থক্য আনতে পারে তা অনুভব করুন. 
+            আমরা আপনাকে এবং আপনার পরিবারের স্বাস্থ্যের প্রয়োজন পূরণে সেবা দিতে প্রস্তুত.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/patient/login">
               <Button size="lg" variant="secondary">
                 <Users className="w-5 h-5 mr-2" />
-                Become a Patient
+                একটি রোগী হন
               </Button>
             </Link>
             <Link href="/contact">
               <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-blue-600">
                 <Mail className="w-5 h-5 mr-2" />
-                Contact Us
+                আমাদের সাথে যোগাযোগ করুন
               </Button>
             </Link>
           </div>
@@ -394,25 +376,25 @@ export default function AboutUsPage() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2">
-                <li><Link href="/services" className="text-gray-400 hover:text-white transition-colors">Services</Link></li>
-                <li><Link href="/find-a-doctor" className="text-gray-400 hover:text-white transition-colors">Find A Doctor</Link></li>
-                <li><Link href="/locations" className="text-gray-400 hover:text-white transition-colors">Locations</Link></li>
-                <li><Link href="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</Link></li>
+                <li><Link href="/services" className="text-gray-400 hover:text-white transition-colors">সেবা</Link></li>
+                <li><Link href="/find-a-doctor" className="text-gray-400 hover:text-white transition-colors">ডাক্তার খুঁজুন</Link></li>
+                <li><Link href="/locations" className="text-gray-400 hover:text-white transition-colors">লোকেশনসমূহ</Link></li>
+                <li><Link href="/contact" className="text-gray-400 hover:text-white transition-colors">যোগাযোগ</Link></li>
               </ul>
             </div>
 
             <div>
               <h4 className="text-lg font-semibold mb-4">Patient Care</h4>
               <ul className="space-y-2">
-                <li><Link href="/patient/login" className="text-gray-400 hover:text-white transition-colors">Patient Portal</Link></li>
-                <li><Link href="/services" className="text-gray-400 hover:text-white transition-colors">Medical Services</Link></li>
+                <li><Link href="/patient/login" className="text-gray-400 hover:text-white transition-colors">রোগী পোর্টাল</Link></li>
+                <li><Link href="/services" className="text-gray-400 hover:text-white transition-colors">Medical সেবা</Link></li>
                 <li><Link href="/locations" className="text-gray-400 hover:text-white transition-colors">Emergency Care</Link></li>
                 <li><Link href="/contact" className="text-gray-400 hover:text-white transition-colors">Support</Link></li>
               </ul>
             </div>
 
             <div>
-              <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
+              <h4 className="text-lg font-semibold mb-4">যোগাযোগের তথ্য</h4>
               <div className="space-y-2 text-gray-400">
                 <div className="flex items-center space-x-2">
                   <Phone className="w-4 h-4" />
