@@ -180,11 +180,13 @@ export default function AboutUsPage() {
                     <Globe className="w-6 h-6 text-green-600 mr-2" />
                     Our Vision
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">বাংলাদেশে শীর্ষস্থানীয় স্বাস্থ্যসেবা প্রদানকারী হওয়া, আমাদের উদ্ভাবনী পদ্ধতি, ব্যতিক্রমী রোগী ফলাফল এবং সকলের জন্য স্বাস্থ্যসেবা নিশ্চিত করার প্রতিশ্রুতির জন্য স্বীকৃত।</p>
-                src="https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=800" 
-                alt="Healthcare Team" 
-                className="rounded-2xl shadow-xl"
-              />
+                 {/* Image and badge */}
+                  <div className="relative mt-8">
+                    <img
+                      src="https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&w=800"
+                      alt="Healthcare Team"
+                      className="rounded-2xl shadow-xl"
+                    />
               <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg">
                 <div className="flex items-center space-x-3">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-green-600 rounded-full flex items-center justify-center">
