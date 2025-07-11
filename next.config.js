@@ -3,6 +3,10 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  i18n: {
+    locales: ['en', 'bn'],
+    defaultLocale: 'en',
+  },
   images: { 
     unoptimized: true,
     domains: ['localhost'],
