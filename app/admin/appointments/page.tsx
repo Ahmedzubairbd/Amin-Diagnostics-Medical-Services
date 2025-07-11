@@ -1,7 +1,7 @@
 'use client';
 
 import { useAuth } from '@/lib/auth';
-import { useDataStore } from '@/lib/store';
+import { useDataStore, Appointment } from '@/lib/store';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import Sidebar from '@/components/Layout/Sidebar';
@@ -19,7 +19,7 @@ export default function AdminAppointments() {
   const { appointments, patients, doctors, addAppointment, updateAppointment, deleteAppointment } = useDataStore();
   const [searchTerm, setSearchTerm] = useState('');
   const [showForm, setShowForm] = useState(false);
-  const [editingAppointment, setEditingAppointment] = useState(null);
+  const [editingAppointment, setEditingAppointment] = useState<Appointment | null>(null);
 
   useEffect(() => {
     if (!isAuthenticated || user?.role !== 'admin') {
@@ -39,12 +39,16 @@ export default function AdminAppointments() {
     );
   });
 
-  const handleAddAppointment = (appointmentData) => {
+  const handleAddAppointment = (
+    appointmentData: Omit<Appointment, 'id' | 'createdAt' | 'updatedAt'>
+  ) => {
     addAppointment(appointmentData);
     setShowForm(false);
   };
 
-  const handleEditAppointment = (appointmentData) => {
+  const handleEditAppointment = (
+    appointmentData: Omit<Appointment, 'id' | 'createdAt' | 'updatedAt'>
+  ) => {
     if (editingAppointment) {
       updateAppointment(editingAppointment.id, appointmentData);
       setEditingAppointment(null);
@@ -52,13 +56,13 @@ export default function AdminAppointments() {
     }
   };
 
-  const handleDeleteAppointment = (id) => {
+  const handleDeleteAppointment = (id: string) => {
     if (confirm('Are you sure you want to delete this appointment?')) {
       deleteAppointment(id);
     }
   };
 
-  const getStatusBadgeColor = (status) => {
+  const getStatusBadgeColor = (status: Appointment['status']) => {
     switch (status) {
       case 'scheduled':
         return 'bg-blue-100 text-blue-800';
@@ -73,7 +77,7 @@ export default function AdminAppointments() {
     }
   };
 
-  const getTypeBadgeColor = (type) => {
+  const getTypeBadgeColor = (type: Appointment['type']) => {
     switch (type) {
       case 'emergency':
         return 'bg-red-100 text-red-800';
@@ -100,7 +104,7 @@ export default function AdminAppointments() {
           <Header />
           <main className="flex-1 overflow-x-hidden overflow-y-auto bg-gray-50 p-6">
             <AppointmentForm
-              appointment={editingAppointment}
+              appointment={editingAppointment ?? undefined}
               onSubmit={editingAppointment ? handleEditAppointment : handleAddAppointment}
               onCancel={() => {
                 setShowForm(false);

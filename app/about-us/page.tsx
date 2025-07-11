@@ -2,6 +2,7 @@
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import LanguageToggle from '@/components/LanguageToggle';
 import { Badge } from '@/components/ui/badge';
 import { 
   Heart, 
@@ -139,6 +140,7 @@ export default function AboutUsPage() {
                 <Button size="sm">Staff Login</Button>
               </Link>
             </div>
+            <LanguageToggle />
           </div>
         </div>
       </nav>

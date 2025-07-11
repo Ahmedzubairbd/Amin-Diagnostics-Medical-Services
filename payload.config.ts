@@ -5,17 +5,17 @@ import { slateEditor } from '@payloadcms/richtext-slate';
 import path from 'path';
 
 // Collections
-import Users from './collections/Users';
-import Patients from './collections/Patients';
-import Doctors from './collections/Doctors';
-import Appointments from './collections/Appointments';
-import MedicalRecords from './collections/MedicalRecords';
-import TestResults from './collections/TestResults';
-import Prescriptions from './collections/Prescriptions';
-import Services from './collections/Services';
-import CMSContent from './collections/CMSContent';
-import Districts from './collections/Districts';
-import Facilities from './collections/Facilities';
+import Users from './app/collections/Users';
+import Patients from './app/collections/Patients';
+import Doctors from './app/collections/Doctors';
+import Appointments from './app/collections/Appointments';
+import MedicalRecords from './app/collections/MedicalRecords';
+import TestResults from './app/collections/TestResults';
+import Prescriptions from './app/collections/Prescriptions';
+import Services from './app/collections/Services';
+import CMSContent from './app/collections/CMSContent';
+import Districts from './app/collections/Districts';
+import Facilities from './app/collections/Facilities';
 
 export default buildConfig({
   admin: {
