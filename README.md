@@ -142,6 +142,16 @@ Frontend will be at `http://localhost:3000`
    - **Enable Next.js Runtime or use Netlify Adapter if SSR is needed.**
 3. **Deploy!**
 
+### Frontend (Vercel)
+
+1. **Import the repository on <https://vercel.com/new>** and select the project.
+2. Keep the **root directory** as `./`.
+3. Set **Build Command:** `npm run build`.
+4. Set **Output Directory:** `.next` (Vercel uses this by default).
+5. Add environment variable `NEXT_PUBLIC_PAYLOAD_API_URL` pointing to your deployed Payload backend.
+6. Confirm the Node.js version (18+) in **Project Settings** if needed.
+7. Click **Deploy** and wait for Vercel to build and host your app.
+
 ### Backend (Payload CMS)
 
 - Deploy `/backend` to [Railway](https://railway.app/), [Render](https://render.com/), or your own VPS.

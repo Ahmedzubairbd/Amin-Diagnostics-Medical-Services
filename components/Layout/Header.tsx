@@ -11,10 +11,19 @@ export default function Header() {
   return (
     <header className="h-16 bg-white border-b border-gray-200 flex items-center justify-between px-6 shadow-sm">
       <div className="flex items-center space-x-4">
-        <div className="relative">
+        {/* Brand Logo and Text */}
+        <div className="flex items-center space-x-3">
+          <img src="../public/dark-logo.svg" alt="Amin Diagnostics Logo" className="w-10 h-10 rounded-lg" />
+          <div>
+            <h1 className="text-xl font-bold text-gray-900">Amin Diagnostics</h1>
+            <p className="text-xs text-gray-500">Your Health, Our Priority</p>
+          </div>
+        </div>
+        {/* Search Bar */}
+        <div className="relative ml-8">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
-          <Input 
-            placeholder="Search patients, appointments..." 
+          <Input
+            placeholder="Search patients, appointments..."
             className="pl-10 w-80 h-10 bg-gray-50 border-gray-200 focus:bg-white transition-colors"
           />
         </div>
@@ -27,7 +36,7 @@ export default function Header() {
             3
           </span>
         </Button>
-        
+
         <Button variant="ghost" size="icon" className="hover:bg-gray-50 transition-colors">
           <Settings className="w-5 h-5" />
         </Button>
