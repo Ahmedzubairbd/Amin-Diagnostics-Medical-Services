@@ -1,7 +1,7 @@
 'use client';
 
 import { useAuth } from '@/lib/auth';
-import { useDataStore } from '@/lib/store';
+import { useDataStore, MedicalRecord } from '@/lib/store';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import Sidebar from '@/components/Layout/Sidebar';
@@ -17,7 +17,7 @@ export default function PatientRecords() {
   const router = useRouter();
   const { medicalRecords, doctors } = useDataStore();
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedRecord, setSelectedRecord] = useState(null);
+  const [selectedRecord, setSelectedRecord] = useState<MedicalRecord | null>(null);
 
   useEffect(() => {
     if (!isAuthenticated || user?.role !== 'patient') {
@@ -189,7 +189,7 @@ export default function PatientRecords() {
                       <div>
                         <h4 className="font-medium text-gray-900 mb-2">Attachments</h4>
                         <div className="space-y-2">
-                          {selectedRecord.attachments.map((attachment, index) => (
+                          {selectedRecord.attachments.map((attachment: string, index: number) => (
                             <div key={index} className="flex items-center justify-between p-2 bg-gray-50 rounded">
                               <span className="text-sm text-gray-700">Document {index + 1}</span>
                               <Button variant="ghost" size="sm">
